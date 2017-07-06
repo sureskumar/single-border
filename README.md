@@ -11,10 +11,10 @@ Border colors can be changed after quiting the plugin. Just select the border (s
 
 When borders are applied to adjacent sides, instead of borders overlapping, a diagonal line is generated which divides both the borders (like in CSS). When the borders are of same color, this division wont be visible.
 ![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_02.jpg)
-![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_02.gif)
 
 You can also set the border position to Inside, Center and Outside.
 ![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_03.jpg)
+![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_02.gif)
 
 Single Border plugin lets you apply borders individually to any side and also assign thier position individually.
 ![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_04.jpg)
