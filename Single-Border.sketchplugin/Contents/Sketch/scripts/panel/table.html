@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Border</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script type="text/javascript" src="assets/js/lib/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="settings-panel">
+      <table>
+        <tr>
+          <td class="cell"></td>
+          <td class="cell">Side</td>
+          <td class="cell">Position</td>
+          <td class="cell">Thickness</td>
+        </tr>
+        <tr>
+            <td class="cell"><input type="checkbox" id="toggle_top" class="chcBox"></td>
+            <td class="cell"><img src="assets/img/top.png" class="ui_icon"></td>
+            <td class="cell">
+              <select id="pos_top">
+                <option value="Center">Center</option>
+                <option value="Inside" selected="selected">Inside</option>
+                <option value="Outside">Outside</option>
+              </select>
+            </td>
+            <td class="cell"><input type="text" id="thick_top" value="1" size="6" class="ui_txt"></td>
+        </tr>
+        <tr>
+            <td class="cell"><input type="checkbox" id="toggle_right" class="chcBox"></td>
+            <td class="cell"><img src="assets/img/right.png" class="ui_icon"></td>
+            <td class="cell">
+              <select id="pos_right">
+                <option value="Center">Center</option>
+                <option value="Inside" selected="selected">Inside</option>
+                <option value="Outside">Outside</option>
+              </select>
+            </td>
+            <td class="cell"><input type="text" id="thick_right" value="1" size="6" class="ui_txt"></td>
+        </tr>
+        <tr>
+            <td class="cell"><input type="checkbox" id="toggle_bottom" class="chcBox"></td>
+            <td class="cell"><img src="assets/img/bottom.png" class="ui_icon"></td>
+            <td class="cell">
+              <select id="pos_bottom">
+                <option value="Center">Center</option>
+                <option value="Inside" selected="selected">Inside</option>
+                <option value="Outside">Outside</option>
+              </select>
+            </td>
+            <td class="cell"><input type="text" id="thick_bottom" value="1" size="6" class="ui_txt"></td>
+        </tr>
+        <tr>
+            <td class="cell"><input type="checkbox" id="toggle_left" class="chcBox"></td>
+            <td class="cell"><img src="assets/img/left.png" class="ui_icon"></td>
+            <td class="cell">
+              <select id="pos_left">
+                <option value="Center">Center</option>
+                <option value="Inside" selected="selected">Inside</option>
+                <option value="Outside">Outside</option>
+              </select>
+            </td>
+            <td class="cell"><input type="text" id="thick_left" value="1" size="6" class="ui_txt"></td>
+        </tr>
+      </table>           
+                
+
+      
+    </div>
+
+          <div class="block__footer">            
+            <div class="fr">
+              <button id="done" class="btn btnLoop">Done</button>
+            </div>
+
+            <div class="fr">
+              <button id="close" class="btn btnClose">Cancel</button>
+            </div>
+          </div>
+    
+  </div>
+  
+  <script type="text/javascript" src="assets/js/components/table.js"></script>
+  <!--
+  <script type="text/javascript" src="assets/js/common.js"></script>
+  
+  <script type="text/javascript" src="assets/js/components/analytics.js"></script>
+  <script>
+    ga('send', 'pageview', 'table');
+  </script>
+  -->
+  </body>
+</html>

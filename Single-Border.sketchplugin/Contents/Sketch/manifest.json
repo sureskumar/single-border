@@ -1,0 +1,33 @@
+{
+	"name": "Single Border",
+	"identifier": "com.sureskumar.singleborder",
+	"version": "1.0.0",
+  	"compatibleVersion": "40.0",
+  	"appcast": "http://www.sureskumar.com/singleborder/singleborder.xml",
+	"description": "Add single borders with advanced controls.",
+	"icon" : "http://www.sureskumar.com/singleborder/github_imgs/logo.png",
+	"author": "Sures Kumar",
+	"authorEmail": "sures.srinivasan@gmail.com",
+	"homepage": "http://www.sureskumar.com",
+	"menu": {
+    "isRoot": false,
+    "items": [
+      "singleborder",
+      "feedback"
+    ],
+    "title": "Single Border"
+  },
+  "commands": [{
+    "name": "Single Border",
+    "identifier": "singleborder",
+    "handler": "singleborder",
+    "shortcut": "cmd shift b",
+    "script": "md.sketchscript"
+  },
+  {
+    "name": "Feedback",
+    "identifier": "feedback",
+    "handler": "feedback",
+    "script": "links.sketchscript"
+  }]
+}
