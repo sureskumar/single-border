@@ -24,6 +24,7 @@ Single Border plugin lets you apply borders individually to any side and also as
 
 Using the new resizing options (fixed width / height), you can couple the border with the layer so that when you rezise the layer, border stays in place.
 
+![Single Border example](http://www.sureskumar.com/singleborder/github_imgs/sketch_single_border_04.gif)
 
 ## Installation
 
