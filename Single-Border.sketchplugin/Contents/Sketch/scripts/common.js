@@ -639,8 +639,10 @@ MD["Pattern"] = function()
     var runPLugin = function()
     {
         if (selection.count() <= 0) {
+          sendEvent(MD.context, 'Error', 'No layer selected');
           showDialog("Single Border", "Please select a rectangle to apply border. Cheers!");
         } else if(selection.count() > 1) {
+          sendEvent(MD.context, 'Error', 'More than 1 layer selected');
           showDialog("Single Border", "Please select only one rectangle to apply border. Cheers!");
         } else {
               var layer = selection[0];
@@ -675,6 +677,7 @@ MD["Pattern"] = function()
                   superDebug("layerH", layerH);
              // }              
 
+              sendEvent(MD.context, 'Success', 'UI Modal opened');
               MD.patternPanel();
         }      
     }
@@ -696,4 +699,52 @@ MD["Pattern"] = function()
     }
 
   runPLugin();
+}
+
+var kUUIDKey = 'google.analytics.uuid'
+var uuid = NSUserDefaults.standardUserDefaults().objectForKey(kUUIDKey)
+if (!uuid) {
+  uuid = NSUUID.UUID().UUIDString()
+  NSUserDefaults.standardUserDefaults().setObject_forKey(uuid, kUUIDKey)
+}
+
+function jsonToQueryString(json) {
+  return '?' + Object.keys(json).map(function(key) {
+    return encodeURIComponent(key) + '=' + encodeURIComponent(json[key]);
+  }).join('&')
+}
+
+var index = function (context, trackingId, hitType, props) {
+  var payload = {
+    v: 1,
+    tid: trackingId,
+    ds: 'Sketch%20' + NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString"),
+    cid: uuid,
+    t: hitType,
+    an: context.plugin.name(),
+    aid: context.plugin.identifier(),
+    av: context.plugin.version()
+  }
+  if (props) {
+    Object.keys(props).forEach(function (key) {
+      payload[key] = props[key]
+    })
+  }
+
+  var url = NSURL.URLWithString(
+    NSString.stringWithFormat("https://www.google-analytics.com/collect%@", jsonToQueryString(payload))
+  )
+
+  if (url) {
+    NSURLSession.sharedSession().dataTaskWithURL(url).resume()
+  }
+}
+
+var key = 'UA-102183635-1';
+var sendEvent = function (context, category, action, label) {
+  //log("GA called");
+  var payload = {};
+  payload.ec = category;
+  payload.ea = action;
+  return index(context, key, 'event', payload);
 }
