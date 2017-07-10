@@ -5,7 +5,8 @@
 //
 
 var loop, 
-ori_layer_name, 
+ori_layer_name,
+ori_layer_id, 
 created_looper_group, 
 ori_x, 
 ori_y;
@@ -312,10 +313,10 @@ MD.extend({
         });
         if(self.configs) {  
             
-            var top_temp = "Top_" + ori_layer_name;
-            var right_temp = "Right_" + ori_layer_name;
-            var bottom_temp = "Bottom_" + ori_layer_name;
-            var left_temp = "Left_" + ori_layer_name;
+            var top_temp = ori_layer_name + "_Border_Top_" + ori_layer_id;
+            var right_temp = ori_layer_name + "_Border_Right_" + ori_layer_id;
+            var bottom_temp = ori_layer_name + "_Border_Bottom_" + ori_layer_id;
+            var left_temp = ori_layer_name + "_Border_Left_" + ori_layer_id;
 
             MD.superDebug("Panel returned value");
 
@@ -605,8 +606,7 @@ MD.extend({
       border.color = color2;
     }
     
-
-    var temp_name = pos + "_" + ori_layer_name;
+    var temp_name = ori_layer_name + "_Border_" + pos + "_" + ori_layer_id;
     shape.setName(temp_name);
     MD.current.addLayers([shape]);
 
@@ -649,7 +649,8 @@ MD["Pattern"] = function()
           showDialog("Single Border", "Please select only one rectangle to apply border. Cheers!");
         } else {
               var layer = selection[0];
-              ori_layer_name = layer.objectID();
+              ori_layer_id = layer.objectID();
+              ori_layer_name = layer.name();
               
               /*
               if(MD.artboard) {
