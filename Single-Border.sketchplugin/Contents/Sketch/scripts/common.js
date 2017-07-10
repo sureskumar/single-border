@@ -609,6 +609,9 @@ MD.extend({
     var temp_name = pos + "_" + ori_layer_name;
     shape.setName(temp_name);
     MD.current.addLayers([shape]);
+
+    MD.current.resizeToFitChildrenWithOption(0);
+
   },
 
   superDebug: function( lbl, val )
@@ -648,7 +651,8 @@ MD["Pattern"] = function()
               var layer = selection[0];
               ori_layer_name = layer.objectID();
               
-              /*if(MD.artboard) {
+              /*
+              if(MD.artboard) {
                   layerX = layer.frame().x();
                   superDebug("layerX", layerX);
                   
@@ -675,7 +679,22 @@ MD["Pattern"] = function()
                   
                   layerH = rect.height();
                   superDebug("layerH", layerH);
-             // }              
+
+
+                  if(MD.artboard) {
+                    var alayer = MD.artboard;
+                    var arect = alayer.absoluteRect();
+
+                    var alayerX = arect.x();
+                    superDebug("alayerX", alayerX);
+                    
+                    var alayerY = arect.y();
+                    superDebug("alayerY", alayerY); 
+
+                    layerX = layerX - alayerX;
+                    layerY = layerY - alayerY;
+                  }
+              //}              
 
               sendEvent(MD.context, 'Success', 'UI Modal opened');
               MD.patternPanel();
