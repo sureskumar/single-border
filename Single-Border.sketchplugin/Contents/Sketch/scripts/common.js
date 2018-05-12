@@ -584,7 +584,9 @@ MD.extend({
     path.closePath();
 
 
-    var shape = MSShapeGroup.shapeWithBezierPath(path);
+    //var shape = MSShapeGroup.shapeWithBezierPath(path);
+    var newBezier = MSPath.pathWithBezierPath(path);
+    var shape = MSShapeGroup.shapeWithBezierPath(newBezier);
     var border = shape.style().addStylePartOfType(0);
     
     var color1 = MSColor.colorWithRed_green_blue_alpha(0.6, 0.6, 0.6, 1.0);

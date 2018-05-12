@@ -1,7 +1,7 @@
 {
 	"name": "Single Border",
 	"identifier": "com.sureskumar.singleborder",
-	"version": "1.3.0",
+	"version": "1.4.0",
   	"compatibleVersion": "40.0",
   	"appcast": "http://www.sureskumar.com/singleborder/singleborder.xml",
 	"description": "Add single borders with advanced controls.",
