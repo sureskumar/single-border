@@ -1,14 +1,13 @@
 {
 	"name": "Single Border",
 	"identifier": "com.sureskumar.singleborder",
-	"version": "1.4.0",
-  	"compatibleVersion": "40.0",
-  	"appcast": "http://www.sureskumar.com/singleborder/singleborder.xml",
+	"version": "1.5.0",
+  	"compatibleVersion": "51.0",
+  	"appcast": "https://github.com/sureskumar/single-border/raw/master/assets/singleborder.xml",
 	"description": "Add single borders with advanced controls.",
-	"icon" : "http://www.sureskumar.com/singleborder/github_imgs/logo.png",
+	"icon" : "https://github.com/sureskumar/single-border/raw/master/assets/logo.png",
 	"author": "Sures Kumar",
 	"authorEmail": "sures.srinivasan@gmail.com",
-	"homepage": "http://www.sureskumar.com",
 	"menu": {
     "isRoot": false,
     "items": [

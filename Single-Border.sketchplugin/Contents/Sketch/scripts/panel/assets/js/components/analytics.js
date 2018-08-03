@@ -6,5 +6,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-102183635-1', 'auto');
 
 ga('set', 'checkProtocolTask', function(data) {
-  data.set('location', 'http://www.sureskumar/single-border/');
+  //data.set('location', 'http://www.sureskumar/single-border/');
 });
