@@ -1,4 +1,4 @@
-# Single Border v1.5 `⌘ + shift + B`
+# Single Border v1.6 `⌘ + shift + B`
 Add single borders in Sketch App with advanced controls.
 
 ## Features
