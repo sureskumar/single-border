@@ -1,8 +1,8 @@
 {
 	"name": "Single Border",
 	"identifier": "com.sureskumar.singleborder",
-	"version": "1.5.0",
-  	"compatibleVersion": "51.0",
+	"version": "1.6.0",
+  	"compatibleVersion": "52.0",
   	"appcast": "https://github.com/sureskumar/single-border/raw/master/assets/singleborder.xml",
 	"description": "Add single borders with advanced controls.",
 	"icon" : "https://github.com/sureskumar/single-border/raw/master/assets/logo.png",
