@@ -1,4 +1,4 @@
-# Single Border v1.6 `⌘ + shift + B`
+# Single Border v1.7 `⌘ + shift + B`
 Add single borders in Sketch App with advanced controls.
 
 ## Features
@@ -30,7 +30,7 @@ Using the new resizing options (fixed width / height), you can couple the border
 
 Make sure you have the latest version of Sketch installed. **(Sketch 40+)**
 
-1. [Download the ZIP file of this repository](https://github.com/sureskumar/single-border/releases/download/v1.5/Single-Border.sketchplugin.zip)
+1. [Download the ZIP file of this repository](https://github.com/sureskumar/single-border/releases/download/v1.7/Single-Border.sketchplugin.zip)
 2. Double click on `Single-Border.sketchplugin`
 
 ## Contact me

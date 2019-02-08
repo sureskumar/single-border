@@ -613,7 +613,13 @@ MD.extend({
     shape.setName(temp_name);
     MD.current.addLayers([shape]);
 
-    MD.current.resizeToFitChildrenWithOption(0);
+    //MD.current.resizeToFitChildrenWithOption(0);
+
+    if (MSApplicationMetadata.metadata().appVersion >= 53) {
+      MD.current.fixGeometryWithOptions(1);
+    } else {
+      MD.current.resizeToFitChildrenWithOption(0);
+    }
 
   },
 

@@ -89,5 +89,17 @@
         <pubDate>Wed, 03 Oct 2018 10:00:00 +0000</pubDate>
         <enclosure url="https://github.com/sureskumar/single-border/releases/download/v1.6/Single-Border.sketchplugin.zip" sparkle:version="1.6" length="80353" type="application/octet-stream" />
       </item>
+      <item>
+        <title>Version 1.7</title>
+        <description>
+          <![CDATA[
+            <ul>
+            <li>v1.7</li>
+            </ul>
+          ]]>
+        </description>
+        <pubDate>Fri, 08 Feb 2019 10:00:00 +0000</pubDate>
+        <enclosure url="https://github.com/sureskumar/single-border/releases/download/v1.7/Single-Border.sketchplugin.zip" sparkle:version="1.7" length="77814" type="application/octet-stream" />
+      </item>
   </channel>
 </rss>
